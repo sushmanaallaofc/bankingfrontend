@@ -10,10 +10,10 @@ const CreateAccount = () => {
 
   return (
     <Card
-      hdrcolor="greenyellow"
-      hdrtext="#282c34"
-      bodycolor="dodgerblue"
-      bodytext="#282c34"
+      hdrcolor="#40485d"
+      hdrtext="white"
+      bodycolor="#40485d"
+      bodytext="white"
       header="Create Account"
       status={status}
       body={

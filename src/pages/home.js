@@ -7,17 +7,20 @@ const Home = () => {
    <>
    <Welcome/>
    <Card 
-   className="home-page"
-   hdrcolor="greenyellow"
-   hdrtext="#282c34"
-   bodycolor="dodgerblue"
-   bodytext="#282c34"
-   header="Welcome to iBank"
+   className="home-page "
+   hdrcolor="#40485d"
+   hdrtext="white"
+   bodycolor="#40485d"
+   bodytext="white"
+   header="Welcome to Sushma's Bank"
    title="Banking Made Easy"
    text="For all your internet Bankings needs!"
-   body={(<img src="bank.png" 
-            className="img-fluid w-75" 
-            alt="Bank"/>)}
+   body={(
+   <div className='d-flex justify-content-center align-items-center'>
+    <img src="bank.png" 
+            className="d-flex justify-content-center img-fluid w-75" 
+            alt="Bank"/>
+    </div>)}
    />
    </>
     );
