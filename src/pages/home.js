@@ -8,8 +8,8 @@ const Home = () => {
    <Welcome/>
    <Card 
    className="home-page "
-   hdrcolor="#40485d"
-   hdrtext="white"
+   hdrcolor="#ACADAF"
+   hdrtext="black"
    bodycolor="#40485d"
    bodytext="white"
    header="Welcome to Sushma's Bank"

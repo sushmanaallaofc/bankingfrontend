@@ -11,8 +11,8 @@ const Login = () => {
 
   return (
     <Card
-      hdrcolor="#40485d"
-      hdrtext="white"
+    hdrcolor="#ACADAF"
+    hdrtext="black"
       bodycolor="#40485d"
       bodytext="white"
       header="Login"
