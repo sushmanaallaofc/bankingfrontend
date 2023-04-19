@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Card from "../components/card.js";
 import { useNavigate } from "react-router-dom";
 import jwt from "jsonwebtoken";
@@ -102,7 +102,21 @@ const LoginForm = props => {
     setPassword("");
     setValidTransaction(false);
   };
-
+  useEffect(() => {
+    window.gapi.load('auth2', () => {
+      window.gapi.auth2.init({
+        client_id: '776399895709-3ddui6f51u8capadvdlsh0nejmk2ph8f.apps.googleusercontent.com',
+      });
+    });
+  }, []);
+  function onSignIn(googleUser) {
+    var id_token = googleUser.getAuthResponse().id_token;
+fetch('https://sushmanaalla-banking-api.onrender.com/gauthenticate?id_token='+id_token)
+.then((res)=>res.json())
+.then((data)=>{
+sessionStorage.setItem("authToken", data.token)
+})
+  }
   return (
     <form>
       <label>Email address</label>
@@ -130,6 +144,8 @@ const LoginForm = props => {
           enableSubmit();
         }}
       />
+         <div className="g-signin2" data-onsuccess={onSignIn}></div>
+
       <br />
       <button
         type="submit"
