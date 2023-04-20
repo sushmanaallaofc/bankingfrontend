@@ -11,10 +11,10 @@ const Login = () => {
 
   return (
     <Card
-      hdrcolor="maroon"
-      hdrtext="white"
-      bodycolor="white"
-      bodytext="maroon"
+    hdrcolor="#ACADAF"
+    hdrtext="black"
+    bodycolor="#40485d"
+    bodytext="white"
       header="Login"
       status={status}
       body={

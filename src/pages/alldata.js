@@ -35,14 +35,14 @@ const AllData = () => {
       <Welcome />
       <Card 
         className="withdrawal-page p-3"
-        hdrcolor="gray"
-        hdrtext="white"
-        bodycolor="white"
-        bodytext="#282c34"
+        hdrcolor="#ACADAF"
+        hdrtext="black"
+        bodycolor="#40485d"
+        bodytext="white"
         header="All Data"
         body={
           <table className="table"  >
-            <thead>
+            <thead style={{color:'white'}}>
               <tr>
                 <th className="fs-6" scope="col">
                   Name
@@ -55,7 +55,7 @@ const AllData = () => {
                 </th>
               </tr>
             </thead>
-            <tbody>{list}</tbody>
+            <tbody style={{color:'white'}}>{list}</tbody>
           </table>
         }
       ></Card>
