@@ -131,7 +131,7 @@ const LoginForm = props => {
         }}
       />
       <br />
-//      <a style={{textDecoration:'underline',fontSize:'12px'}}>sign in with google</a>
+
       <button
         type="submit"
         className="form-control btn btn-light mb-1 mt-0"
