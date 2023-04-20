@@ -11,11 +11,10 @@ const Login = () => {
 
   return (
     <Card
-      className="home-page"
-      hdrcolor="dodgerblue"
-      hdrtext="white"
-      bodycolor="#F6F9F2"
-      bodytext="#030501"
+    hdrcolor="#ACADAF"
+    hdrtext="black"
+      bodycolor="#40485d"
+      bodytext="white"
       header="Login"
       status={status}
       body={
@@ -64,7 +63,6 @@ const LoginForm = props => {
       .then(response => response.text())
       .then(text => {
         try {
-          console.log(text, "text");
           const data = JSON.parse(text);
           localStorage.setItem("token", data.account);
           const token = localStorage.getItem("token");
@@ -112,7 +110,7 @@ const LoginForm = props => {
         type="input"
         className="form-control"
         id="email"
-        placeholder="Enter email"
+        placeholder="Enter your email"
         value={email}
         onChange={e => {
           setEmail(e.currentTarget.value);
@@ -136,7 +134,7 @@ const LoginForm = props => {
       <button
         type="submit"
         className="form-control btn btn-light mb-1 mt-0"
-        style={{ backgroundColor: "dodgerblue", color: "white" }}
+        disabled={!validTransaction}
         onClick={handleLogin}
       >
         Submit

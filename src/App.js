@@ -7,13 +7,14 @@ import AllData from "./pages/alldata";
 import CreateAccount from "./pages/createaccount";
 import Login from "./pages/login";
 import Deposit from "./pages/deposit";
+import "./App.css";
 
 function App() {
   const [status, setStatus] = useState(null);
   useEffect(() => {
     setInterval(() => {
       setStatus(localStorage.getItem("token"));
-    }, 100);
+    }, 3000);
   }, []);
   
   return (

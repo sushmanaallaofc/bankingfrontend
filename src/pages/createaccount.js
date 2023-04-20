@@ -10,13 +10,12 @@ const CreateAccount = () => {
 
   return (
     <Card
-      className="home-page"
-      hdrcolor="dodgerblue"
+      hdrcolor="#40485d"
       hdrtext="white"
-      bodycolor="#F6F9F2"
-      bodytext="#030501"
-      status={status}
+      bodycolor="#40485d"
+      bodytext="white"
       header="Create Account"
+      status={status}
       body={
         show ? (
           <CreateForm setShow={setShow} setStatus={setStatus} />
@@ -100,31 +99,31 @@ const CreateForm = props => {
 
   return (
     <form>
-      <label style={{ fontSize: "20px" }}>Name</label>
+      <label>Name</label>
       <input
         type="input"
         className="form-control"
         id="name"
-        placeholder="Enter your name"
+        placeholder="Enter name"
         value={name}
         onChange={e => {
           setName(e.currentTarget.value);
           enableSubmit();
         }}
       />
-      <label style={{ fontSize: "20px" }}>Email</label>
+      <label>Email address</label>
       <input
         type="input"
         className="form-control"
         id="email"
-        placeholder="Enter your email"
+        placeholder="Enter email"
         value={email}
         onChange={e => {
           setEmail(e.currentTarget.value);
           enableSubmit();
         }}
       />
-      <label style={{ fontSize: "20px" }}>Password</label>
+      <label>Password</label>
       <input
         type="password"
         className="form-control"
@@ -140,7 +139,7 @@ const CreateForm = props => {
       <button
         type="submit"
         className="btn btn-light ml-auto"
-        style={{ backgroundColor: "dodgerblue", color: "white" }}
+        disabled={!validTransaction}
         onClick={handleCreate}
       >
         Create Account

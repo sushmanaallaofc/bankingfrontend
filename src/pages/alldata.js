@@ -24,6 +24,7 @@ const AllData = () => {
     return (
       <tr key={index}>
         <td className="fs-6 text-wrap">{user.name}</td>
+        <td className="fs-6 text-wrap">{user.type}</td>
         <td className="fs-6 text-wrap">${user.balance}</td>
       </tr>
     );
@@ -34,24 +35,27 @@ const AllData = () => {
       <Welcome />
       <Card
         className="withdrawal-page p-3"
-        hdrcolor="dodgerblue"
-        hdrtext="white"
-        bodycolor="#F6F9F2"
-        bodytext="#030501"
-        header="Balance"
+        hdrcolor="#ACADAF"
+        hdrtext="black"
+        bodycolor="#40485d"
+        bodytext="white"
+        header="All Data"
         body={
           <table className="table">
-            <thead>
+            <thead style={{color:'white'}}>
               <tr>
                 <th className="fs-6" scope="col">
                   Name
+                </th>
+                <th className="fs-6" scope="col">
+                  Email
                 </th>
                 <th className="fs-6" scope="col">
                   Balance
                 </th>
               </tr>
             </thead>
-            <tbody>{list}</tbody>
+            <tbody style={{color:'white'}}>{list}</tbody>
           </table>
         }
       ></Card>

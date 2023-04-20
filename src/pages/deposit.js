@@ -40,6 +40,7 @@ const Deposit = () => {
   //handles submit events
   const handleSubmit = event => {
     if (atmMode === "Deposit" && Number(amount) >= 0) {
+      console.log(localStorage.getItem("token"))
       fetch(
         `https://sushmanaalla-banking-api.onrender.com/account/update/${amount}`,
         {
@@ -74,10 +75,10 @@ const Deposit = () => {
       <Welcome />
       <Card
         className="deposit-page p-3"
-        hdrcolor="dodgerblue"
-        hdrtext="white"
-        bodycolor="#F6F9F2"
-        bodytext="#030501"
+        hdrcolor="#ACADAF"
+        hdrtext="black"
+        bodycolor="#40485d"
+        bodytext="white"
         header="Deposits"
         title={status}
         text="Enter Deposit Amount"
