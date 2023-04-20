@@ -11,10 +11,10 @@ const Login = () => {
 
   return (
     <Card
-    hdrcolor="#ACADAF"
-    hdrtext="black"
-      bodycolor="#40485d"
-      bodytext="white"
+      hdrcolor="maroon"
+      hdrtext="white"
+      bodycolor="white"
+      bodytext="maroon"
       header="Login"
       status={status}
       body={
@@ -131,6 +131,7 @@ const LoginForm = props => {
         }}
       />
       <br />
+     <a style={{textDecoration:'underline',fontSize:'12px'}}>sign in with google</a>
       <button
         type="submit"
         className="form-control btn btn-light mb-1 mt-0"

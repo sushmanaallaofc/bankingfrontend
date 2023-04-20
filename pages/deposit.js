@@ -76,7 +76,7 @@ const Deposit = () => {
         className="deposit-page p-3"
         hdrcolor="greenyellow"
         hdrtext="#282c34"
-        bodycolor="dodgerblue"
+        bodycolor="success"
         bodytext="#282c34"
         header="Deposits"
         title={status}

@@ -1,5 +1,5 @@
 #root {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -12,41 +12,33 @@
 .welcome{
   margin-left:auto;
   margin-right:0.5rem;
-  color: black;
+  color: greenyellow;
 }
 .app-navbar {
   width: 100%;
-  background-color: #40485d;
-  color: white;
-}
-.nav-item a{
-  color: white;
-}
-.nav-item a:hover{
-  font-weight: bold;
-  color:white;
-}
-
-
-.nav-item a:active{
-  color: white;
-  font-weight: bold;
-}
-
-.nav-item button:hover{
-  font-weight: bold;
-  color: white;
+  background-color: rgb(222, 222, 222);
+  color: #bfbfbf;
 }
 .logout {
   border:none;
-  background-color: #40485d;
+  background-color: rgb(105, 102, 252);
   color: white;
+  border-radius: 10px;
 }
 .app-brand {
   font-size: 2rem;
-  color: white;
+  color: greenyellow;
 }
 .nav-pages {
+  color: #282c34;
+}
+.nav-item button{
+  color: white;
+  background-color: maroon;
+}
+.nav-item button:hover{
   color: white;
 }
-
+.nav-item a:hover{
+  color: maroon;
+}

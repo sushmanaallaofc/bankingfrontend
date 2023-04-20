@@ -11,8 +11,8 @@ const NavBar = ({ status }) => {
     <>
       <nav className="navbar navbar-expand-lg app-navbar">
         <div className="container-fluid">
-          <a className="navbar-brand app-brand mx-2" href="#/">
-            Sushma's Bank
+          <a className="navbar-brand app-brand mx-2" href="#/" style={{color:'maroon'}}>
+            SHIVAMIT PRO-BANK
           </a>
           <button
             className="navbar-toggler navbar-light"

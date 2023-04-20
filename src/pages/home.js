@@ -7,20 +7,17 @@ const Home = () => {
    <>
    <Welcome/>
    <Card 
-   className="home-page "
-   hdrcolor="#ACADAF"
-   hdrtext="black"
-   bodycolor="#40485d"
-   bodytext="white"
-   header="Welcome to Sushma's Bank"
-   title="Banking Made Easy"
+   className="home-page"
+   hdrcolor="maroon"
+   hdrtext="white"
+   bodycolor="white"
+   bodytext="maroon"
+   header="Welcome to SHIVAMIT PRO-BANK"
+   title="Our bank provides Top-notch services"
    text="For all your internet Bankings needs!"
-   body={(
-   <div className='d-flex justify-content-center align-items-center'>
-    <img src="bank.png" 
-            className="d-flex justify-content-center img-fluid w-75" 
-            alt="Bank"/>
-    </div>)}
+   body={(<div className='d-flex justify-content-center'><img src="bank.png" 
+   className="img-fluid w-75" 
+   alt="Bank"/></div>)}
    />
    </>
     );

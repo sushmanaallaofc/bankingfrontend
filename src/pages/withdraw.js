@@ -77,11 +77,12 @@ const Withdraw = () => {
       <Welcome />
       <Card
         className="withdrawal-page p-3"
-        hdrcolor="#ACADAF"
+        hdrcolor="rgb(255, 153, 153)"
         hdrtext="black"
-        bodycolor="#40485d"
+        bodycolor="red"
         bodytext="white"
         header="Withdrawals"
+        
         title={status}
         text="Enter Withdrawal Amount"
         body={

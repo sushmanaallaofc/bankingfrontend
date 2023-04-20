@@ -12,7 +12,7 @@ const NavBar = ({ status }) => {
       <nav className="navbar navbar-expand-lg app-navbar">
         <div className="container-fluid">
           <a className="navbar-brand app-brand mx-2" href="#/">
-            Happy Bank
+            iBank
           </a>
           <button
             className="navbar-toggler navbar-light"
