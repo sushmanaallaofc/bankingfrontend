@@ -1,28 +1,24 @@
-import React from 'react';
+import React from "react";
 import Card from "../components/card.js";
-import Welcome from '../components/welcome.js';
+import Welcome from "../components/welcome.js";
+import BankIcon from "../components/bank.js";
 
 const Home = () => {
-    return (
-   <>
-   <Welcome/>
-   <Card 
-   className="home-page "
-   hdrcolor="#ACADAF"
-   hdrtext="black"
-   bodycolor="#40485d"
-   bodytext="white"
-   header="Welcome to Sushma's Bank"
-   title="Banking Made Easy"
-   text="For all your internet Bankings needs!"
-   body={(
-   <div className='d-flex justify-content-center align-items-center'>
-    <img src="bank.png" 
-            className="d-flex justify-content-center img-fluid w-75" 
-            alt="Bank"/>
-    </div>)}
-   />
-   </>
-    );
-}
+  return (
+    <>
+      <Welcome />
+      <Card
+        className="home-page"
+        hdrcolor="whitegrey"
+        hdrtext="#030501"
+        bodycolor="#F6F9F2"
+        bodytext="#030501"
+        header="Welcome to Happy Bank!!"
+        title="Bringing happiness to your financial journey"
+        text="Banking that leaves you feeling happy and fulfilled"
+        body={<BankIcon />}
+      />
+    </>
+  );
+};
 export default Home;

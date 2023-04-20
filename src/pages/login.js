@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import Card from "../components/card.js";
 import { useNavigate } from "react-router-dom";
 import jwt from "jsonwebtoken";
@@ -11,10 +11,11 @@ const Login = () => {
 
   return (
     <Card
-    hdrcolor="#ACADAF"
-    hdrtext="black"
-      bodycolor="#40485d"
-      bodytext="white"
+      className="home-page"
+      hdrcolor="dodgerblue"
+      hdrtext="white"
+      bodycolor="#F6F9F2"
+      bodytext="#030501"
       header="Login"
       status={status}
       body={
@@ -63,6 +64,7 @@ const LoginForm = props => {
       .then(response => response.text())
       .then(text => {
         try {
+          console.log(text, "text");
           const data = JSON.parse(text);
           localStorage.setItem("token", data.account);
           const token = localStorage.getItem("token");
@@ -102,21 +104,7 @@ const LoginForm = props => {
     setPassword("");
     setValidTransaction(false);
   };
-  useEffect(() => {
-    window.gapi.load('auth2', () => {
-      window.gapi.auth2.init({
-        client_id: '776399895709-3ddui6f51u8capadvdlsh0nejmk2ph8f.apps.googleusercontent.com',
-      });
-    });
-  }, []);
-  function onSignIn(googleUser) {
-    var id_token = googleUser.getAuthResponse().id_token;
-fetch('https://sushmanaalla-banking-api.onrender.com/gauthenticate?id_token='+id_token)
-.then((res)=>res.json())
-.then((data)=>{
-sessionStorage.setItem("authToken", data.token)
-})
-  }
+
   return (
     <form>
       <label>Email address</label>
@@ -124,7 +112,7 @@ sessionStorage.setItem("authToken", data.token)
         type="input"
         className="form-control"
         id="email"
-        placeholder="Enter your email"
+        placeholder="Enter email"
         value={email}
         onChange={e => {
           setEmail(e.currentTarget.value);
@@ -144,13 +132,11 @@ sessionStorage.setItem("authToken", data.token)
           enableSubmit();
         }}
       />
-         <div className="g-signin2" data-onsuccess={onSignIn}></div>
-
       <br />
       <button
         type="submit"
         className="form-control btn btn-light mb-1 mt-0"
-        disabled={!validTransaction}
+        style={{ backgroundColor: "dodgerblue", color: "white" }}
         onClick={handleLogin}
       >
         Submit
