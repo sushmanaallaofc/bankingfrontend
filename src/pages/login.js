@@ -2,7 +2,8 @@ import { useState } from "react";
 import Card from "../components/card.js";
 import { useNavigate } from "react-router-dom";
 import jwt from "jsonwebtoken";
-
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import Google from '../google.js';
 const Login = () => {
   //shows input fields and hides them after from submitted
   const [show, setShow] = useState(true);
@@ -13,8 +14,8 @@ const Login = () => {
     <Card
     hdrcolor="#ACADAF"
     hdrtext="black"
-    bodycolor="#40485d"
-    bodytext="white"
+      bodycolor="#40485d"
+      bodytext="white"
       header="Login"
       status={status}
       body={
@@ -81,7 +82,19 @@ const LoginForm = props => {
         }
       });
   };
-
+  const responseGoogle = (response) => {
+    if (response.error === 'popup_closed_by_user') {
+      // Handle the error gracefully, such as by displaying a message to the user
+      // window.location.href='/'
+      console.log('Popup window was closed by user');
+    } else if (response.accessToken) {
+      // Call your API with the Google access token to authenticate the user
+      console.log('Access token:', response.accessToken);
+    } else {
+      // Handle any other errors that may occur
+      console.log('Unknown error occurred:', response);
+    }
+  }
   const enableSubmit = () => {
     if (email === "" || password === "") {
       setValidTransaction(false);
@@ -131,7 +144,12 @@ const LoginForm = props => {
         }}
       />
       <br />
+      <div className="d-flex justify-content-center align-items-center">
 
+      <GoogleOAuthProvider clientId="776399895709-3ddui6f51u8capadvdlsh0nejmk2ph8f.apps.googleusercontent.com">
+          <Google />
+        </GoogleOAuthProvider>
+      </div>
       <button
         type="submit"
         className="form-control btn btn-light mb-1 mt-0"

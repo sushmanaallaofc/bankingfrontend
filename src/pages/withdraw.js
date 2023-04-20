@@ -82,7 +82,6 @@ const Withdraw = () => {
         bodycolor="#40485d"
         bodytext="white"
         header="Withdrawals"
-        
         title={status}
         text="Enter Withdrawal Amount"
         body={

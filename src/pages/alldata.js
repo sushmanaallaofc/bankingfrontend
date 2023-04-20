@@ -19,12 +19,12 @@ const AllData = () => {
         setUsers(data);
       });
   }, []);
-
+console.log(users)
   let list = users.map((user, index) => {
     return (
       <tr key={index}>
         <td className="fs-6 text-wrap">{user.name}</td>
-        <td className="fs-6 text-wrap">{user.type}</td>
+        <td className="fs-6 text-wrap">{user.email}</td>
         <td className="fs-6 text-wrap">${user.balance}</td>
       </tr>
     );
@@ -33,7 +33,7 @@ const AllData = () => {
   return (
     <>
       <Welcome />
-      <Card 
+      <Card
         className="withdrawal-page p-3"
         hdrcolor="#ACADAF"
         hdrtext="black"
@@ -41,7 +41,7 @@ const AllData = () => {
         bodytext="white"
         header="All Data"
         body={
-          <table className="table"  >
+          <table className="table">
             <thead style={{color:'white'}}>
               <tr>
                 <th className="fs-6" scope="col">

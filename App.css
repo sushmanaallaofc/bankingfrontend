@@ -1,5 +1,5 @@
 #root {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -12,25 +12,22 @@
 .welcome{
   margin-left:auto;
   margin-right:0.5rem;
-  color: greenyellow;
+  color: black;
 }
 .app-navbar {
   width: 100%;
-  background-color: rgb(222, 222, 222);
-  color: #bfbfbf;
+  background-color: #40485d;
+  color: white;
 }
 .logout {
   border:none;
-  background-color: rgb(67, 64, 252);
+  background-color: #40485d;
   color: white;
 }
 .app-brand {
   font-size: 2rem;
-  color: greenyellow;
+  color: white;
 }
 .nav-pages {
-  color: #282c34;
-}
-.nav-item button{
   color: white;
 }

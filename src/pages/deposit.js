@@ -40,6 +40,7 @@ const Deposit = () => {
   //handles submit events
   const handleSubmit = event => {
     if (atmMode === "Deposit" && Number(amount) >= 0) {
+      console.log(localStorage.getItem("token"))
       fetch(
         `https://sushmanaalla-banking-api.onrender.com/account/update/${amount}`,
         {

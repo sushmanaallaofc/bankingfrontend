@@ -4,7 +4,7 @@ const Welcome = () => {
 
   return (
     <>
-      {name ? <p  className="welcome">Welcome {name}!</p> :<></>}
+      {name ? <p className="welcome">Welcome {name}!</p> :<></>}
     </>
   );
 };
